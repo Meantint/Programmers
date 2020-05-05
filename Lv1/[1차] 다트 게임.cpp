@@ -14,7 +14,7 @@ int solution(string dartResult) {
 			num = dartResult[i] - '0';
 			continue;
 		}
-		else if (dartResult[i] - '0' == 1) {        // 1일 때
+		else if (dartResult[i] - '0' == 1) {        	// 1일 때
 			if (dartResult[i + 1] - '0' == 0) {     // 10일 때
 				num = 10;
 				continue;
