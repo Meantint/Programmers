@@ -14,7 +14,7 @@ bool alphabetCheck(char ch) {
 
 int solution(string str1, string str2) {
     int answer = 0;
-    
+     
     // str1과 str2 문자를 모두 대문자로 바꿔준다.
     for (int i = 0; i < str1.size(); ++i) {
         if (str1[i] >= 'a' && str1[i] <= 'z') {
