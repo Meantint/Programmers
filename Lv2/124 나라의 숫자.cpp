@@ -20,11 +20,3 @@ string solution(int n)
 
         return answer;
 }
-
-int main()
-{
-        for (int i = 0; i < 60; ++i)
-                cout << i << " : " << solution(i) << endl;
-
-        return 0;
-}
