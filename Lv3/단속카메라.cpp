@@ -11,10 +11,8 @@ int solution(vector<vector<int>> routes)
 {
     int answer = 0;
 
-    vector<vector<int>> r1 = routes;
     vector<bool> isCheck(routes.size(), false);
     sort(routes.begin(), routes.end(), cmp);
-    sort(r1.begin(), r1.end());
 
     int idx = 0;
     int size = routes.size();
