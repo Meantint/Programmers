@@ -1,10 +1,12 @@
 # Programmers
-코딩테스트 연습 -> [링크](https://programmers.co.kr/learn/challenges?tab=all_challenges)
+Programmers PS -> [https://programmers.co.kr/learn/challenges?tab=all_challenges](https://programmers.co.kr/learn/challenges?tab=all_challenges)
 
-Level 1 -> [https://github.com/Meantint/Programmers/tree/master/Lv1](https://github.com/Meantint/Programmers/tree/master/Lv1)
+My Blog : [https://velog.io/@meantint](https://velog.io/@meantint)
 
-Level 2 -> [https://github.com/Meantint/Programmers/tree/master/Lv2](https://github.com/Meantint/Programmers/tree/master/Lv2)
+<!-- #### Lv1 -> [https://github.com/Meantint/Programmers/tree/master/Lv1](https://github.com/Meantint/Programmers/tree/master/Lv1)
 
-Level 3 -> [https://github.com/Meantint/Programmers/tree/master/Lv3](https://github.com/Meantint/Programmers/tree/master/Lv3)
+#### Lv2 -> [https://github.com/Meantint/Programmers/tree/master/Lv2](https://github.com/Meantint/Programmers/tree/master/Lv2)
 
-Level 4 -> [https://github.com/Meantint/Programmers/tree/master/Lv4](https://github.com/Meantint/Programmers/tree/master/Lv4)
+#### Lv3 -> [https://github.com/Meantint/Programmers/tree/master/Lv3](https://github.com/Meantint/Programmers/tree/master/Lv3)
+
+#### Lv4 -> [https://github.com/Meantint/Programmers/tree/master/Lv4](https://github.com/Meantint/Programmers/tree/master/Lv4) -->
