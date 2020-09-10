@@ -1,4 +1,4 @@
-&nbsp;2020 카카오 블라인드 문제. 문제에서 시키는대로 재귀 함수를 만들면 된다. 괄호 방향을 뒤집으라고 했는데 원소 순서를 바꿔서 풀어서 시간 낭비가 있었다.
+&nbsp;2020 카카오 블라인드 문제. 문제에서 시키는 대로 재귀 함수를 만들면 된다. 괄호 방향을 뒤집으라고 했는데 원소 순서를 바꿔서 풀어서 시간 낭비가 있었다.
 
 #### Programmers - [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058)
 #### My Programmers Code : [https://github.com/Meantint/Programmers](https://github.com/Meantint/Programmers)
@@ -11,7 +11,7 @@
 
 - `w.size() == 0`이면 `return ""`한다.
 
-- `w[0] == '('`이라면 올바른 괄호 이므로 `isGood = true`을 해준다.
+- `w[0] == '('`이라면 올바른 괄호이므로 `isGood = true`을 해준다.
 
 - 문자열을 `u`와 `v`로 나눈 후 문자열을 판단하게 되는데
 
@@ -19,7 +19,7 @@
     
     - `return u + solve(v)`를 해준다.
    
-  - 균형잡힌 괄호 문자열이라면
+  - 균형 잡힌 괄호 문자열이라면
   
     - `(` + `solve(v)` + `)` + (`u[0]`과 `u.back()`을 제외한 나머지 원소의 괄호 방향을 뒤집어서 더한다)
   
