@@ -1,80 +1,74 @@
+#include <algorithm>
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-string change(string p)
+string solve(string w)
 {
-        bool goodStr = true;
-        string newStr = "";
-        string u = "";
-        string v = "";
+    if (w.size() == 0) {
+        return "";
+    }
+    bool isGood = false;
+    int bal = 0;
 
-        int cnt = 0;
-        u += p[0];
-        if (p[0] == '(')
-                cnt++;
+    string u = "", v = "";
+    int size = w.size();
+    for (int i = 0; i < size; ++i) {
+        if (w[i] == '(') {
+            ++bal;
+            if (i == 0) {
+                isGood = true;
+            }
+        }
         else {
-                goodStr = false;
-                cnt--;
+            --bal;
         }
 
-        for (int i = 1; i < p.size(); ++i) {
-                u += p[i];
-                if (p[i] == '(')
-                        cnt++;
-                else
-                        cnt--;
-
-                if (cnt == 0 && i + 1 < p.size()) {
-                        v = p.substr(i + 1, p.size() - i);
-                        break;
-                }
+        if (bal == 0) {
+            u = w.substr(0, i + 1);
+            if (i + 1 < w.size())
+                v = w.substr(i + 1);
+            break;
         }
-
-        if (goodStr == true) {
-                newStr += u;
-                if (v != "") // v가 빈 문자열이 아니라면
-                        newStr += change(v);
+    }
+    // 올바른 괄호 문자열이라면
+    if (isGood) {
+        return u + solve(v);
+    }
+    else {
+        string tmp = "(";
+        tmp += solve(v);
+        tmp += ')';
+        int uSize = u.size();
+        for (int i = 1; i < uSize - 1; ++i) {
+            if (u[i] == '(') {
+                tmp += ')';
+            }
+            else {
+                tmp += '(';
+            }
         }
-        else if (goodStr == false) {
-                newStr += '(';
-                if (v != "") // v가 빈 문자열이 아니라면
-                        newStr += change(v);
-                newStr += ')';
-                for (int i = 1; i < u.size() - 1; ++i) {
-                        if (u[i] == '(')
-                                newStr += ')';
-                        else
-                                newStr += '(';
-                }
-        }
-
-        /*if (v != "") // v가 빈 문자열이 아니라면
-		newStr += change(v);*/
-
-        return newStr;
+        return tmp;
+    }
 }
 
 string solution(string p)
 {
-        string answer = "";
+    string answer = "";
 
-        answer = change(p);
+    answer = solve(p);
 
-        return answer;
+    return answer;
 }
 
-int main()
-{
-        string str;
-        while (1) {
-                cin >> str;
-                if (str == "-1")
-                        break;
-                cout << solution(str) << endl;
-        }
+// int main()
+// {
+//     cout << solution("(()())()") << '\n';
+//     cout << solution(")(") << '\n';
+//     cout << solution("()))((()") << '\n';
+//     cout << solution("))(()(") << '\n';
 
-        return 0;
-}
+//     return 0;
+// }
