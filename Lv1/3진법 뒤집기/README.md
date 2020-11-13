@@ -1,7 +1,10 @@
+# 프로그래머스 - 3진법 뒤집기
+
 &nbsp;문제에 나와 있는 순서대로 구현하면 쉽게 풀 수 있는 문제.
 
-#### Programmers - [3진법 뒤집기](https://programmers.co.kr/learn/courses/30/lessons/68935)
-#### My Programmers Code : [https://github.com/Meantint/Programmers](https://github.com/Meantint/Programmers)
+- Programmers - [3진법 뒤집기](https://programmers.co.kr/learn/courses/30/lessons/68935)
+
+- My Programmers Code : [https://github.com/Meantint/Programmers](https://github.com/Meantint/Programmers)
 
 ## 풀이
 
@@ -12,6 +15,7 @@
 - `answer += (현재 위치의 값) * 3^(자릿수 위치)`
 
 ## Code
+
 ```cpp
 #include <algorithm>
 #include <cmath>
