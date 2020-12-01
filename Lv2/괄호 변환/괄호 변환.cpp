@@ -1,5 +1,3 @@
-#include <algorithm>
-#include <iostream>
 #include <string>
 #include <vector>
 
@@ -7,42 +5,43 @@ using namespace std;
 
 string solve(string w)
 {
-    if (w.size() == 0) {
+    // 빈 문자열인 경우
+    if (w == "") {
         return "";
     }
-    bool isGood = false;
+    // u, v로 분리
+    bool isGood = true;
     int bal = 0;
-
     string u = "", v = "";
-    int size = w.size();
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < w.size(); ++i) {
         if (w[i] == '(') {
+            u += '(';
             ++bal;
-            if (i == 0) {
-                isGood = true;
-            }
         }
         else {
+            u += ')';
             --bal;
         }
-
         if (bal == 0) {
-            u = w.substr(0, i + 1);
-            if (i + 1 < w.size())
-                v = w.substr(i + 1);
+            v = w.substr(i + 1);
             break;
+        }
+        // bal이 음수가 되는 순간 올바른 괄호 문자열이 될 수 없음
+        else if (bal < 0) {
+            isGood = false;
         }
     }
     // 올바른 괄호 문자열이라면
     if (isGood) {
         return u + solve(v);
     }
+    // 올바른 괄호 문자열이 아니라면
     else {
         string tmp = "(";
         tmp += solve(v);
         tmp += ')';
-        int uSize = u.size();
-        for (int i = 1; i < uSize - 1; ++i) {
+
+        for (int i = 1; i < u.size() - 1; ++i) {
             if (u[i] == '(') {
                 tmp += ')';
             }
@@ -62,13 +61,3 @@ string solution(string p)
 
     return answer;
 }
-
-// int main()
-// {
-//     cout << solution("(()())()") << '\n';
-//     cout << solution(")(") << '\n';
-//     cout << solution("()))((()") << '\n';
-//     cout << solution("))(()(") << '\n';
-
-//     return 0;
-// }
