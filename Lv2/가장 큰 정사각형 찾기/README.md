@@ -2,7 +2,7 @@
 
 &nbsp;
 
-- Programmers - [가장 큰 정사각형 찾기](https://programmers.co.kr/learn/courses/30/lessons/42746)
+- Programmers - [가장 큰 정사각형 찾기](https://programmers.co.kr/learn/courses/30/lessons/12905)
 
 - My Programmers Code : [https://github.com/Meantint/Programmers](https://github.com/Meantint/Programmers)
 
