@@ -1,3 +1,24 @@
+# 프로그래머스 - 베스트앨범
+
+&nbsp;STL map을 이용해서 풀었다. 내가봐도 너무 난잡하게 코드를 짠 것 같다.
+
+- Programmers - [베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
+
+- My Programmers Code : [https://github.com/Meantint/Programmers](https://github.com/Meantint/Programmers)
+
+## 풀이
+
+- `key : genre`, `value : (plays, index)`를 저장하는 `map<string, vector<pair<int, int>>>` 변수 `m`을 만들었다.
+
+- `key : genre`, `value : sum of values`인 `map<string, int>` 변수 `sum`을 만들었다.
+
+- 횟수가 같을 때 작은 인덱스가 먼저 오게끔 만들어야 하므로 `sort` 방식을 수정해주는 함수 `comp`를 만들었다.
+
+- 
+
+## Code
+
+```cpp
 #include <algorithm>
 #include <map>
 #include <string>
@@ -59,3 +80,4 @@ vector<int> solution(vector<string> genres, vector<int> plays)
 
     return answer;
 }
+```
